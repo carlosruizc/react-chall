@@ -1,13 +1,17 @@
-import { Dispatch } from "redux"
+import type { Dispatch } from "redux"
+import type { BreakifyResult } from "../../Views/Breakify/components/utils/functions"
 import { handleBreakify } from "../../Views/Breakify/components/utils/functions"
-import { BreakifyResult } from "../../Views/Breakify/components/utils/functions"
 
-export interface breakifyStringAction {
+export interface BreakifySuccessAction {
   type: "BREAKIFY_SUCCESS"
-  payload: BreakifyResult
+  payload: BreakifyResult[]
 }
 
-export const breakifyStrings = (inputs: string[]) => (dispatch: Dispatch) => {
-  const results = inputs.map(input => handleBreakify(input))
-  dispatch({ type: "BREAKIFY_SUCCESS", payload: results })
-}
+export const breakifyStrings =
+  (inputs: string[]) => (dispatch: Dispatch<BreakifySuccessAction>) => {
+    const results = inputs.map(input => handleBreakify(input))
+    dispatch({
+      type: "BREAKIFY_SUCCESS",
+      payload: results,
+    })
+  }

@@ -1,4 +1,4 @@
-import { breakifyStringAction } from "../actions/breakifyStrings"
+import type { BreakifySuccessAction } from "../actions/breakifyStrings"
 
 interface BreakifyState {
   identifiedElement: string[][]
@@ -12,7 +12,7 @@ const initialState: BreakifyState = {
 
 export const breakifyStringReducer = (
   state: BreakifyState = initialState,
-  action: breakifyStringAction,
+  action: BreakifySuccessAction,
 ): BreakifyState => {
   switch (action.type) {
     case "BREAKIFY_SUCCESS": {
