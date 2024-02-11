@@ -6,22 +6,26 @@ Uses [Vite](https://vitejs.dev/), [Vitest](https://vitest.dev/), and [React Test
 npx degit reduxjs/redux-templates/packages/vite-template-redux my-app
 ```
 
-## Goals
+## Getting Started
 
-- Easy migration from Create React App or Vite
-- As beginner friendly as Create React App
-- Optimized performance compared to Create React App
-- Customizable without ejecting
+Run the development server:
+
+```bash
+npm run dev
+```
 
 ## Scripts
 
+```bash
 - `dev`/`start` - start dev server and open browser
 - `build` - build for production
 - `preview` - locally preview production build
-- `test` - launch test runner
+- `test` - launch test runner,- `
+```
 
-## Inspiration
+## Deploy to githup pages
 
-- [Create React App](https://github.com/facebook/create-react-app/tree/main/packages/cra-template)
-- [Vite](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react)
-- [Vitest](https://github.com/vitest-dev/vitest/tree/main/examples/react-testing-lib)
+```bash
+npm run build
+npm deploy
+```
