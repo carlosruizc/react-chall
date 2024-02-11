@@ -1,0 +1,49 @@
+.inputFieldsContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.inputField {
+  display: flex;
+  flex-direction: column;
+  margin: 0.5em 0 0.5em 0;
+  padding: 0.5em;
+}
+
+input {
+  background-color: white;
+  border: none;
+  border-radius: 0.3em;
+  box-shadow: none;
+  padding: 8px;
+  color: black;
+}
+
+label {
+  display: flex;
+  justify-content: left;
+}
+
+.breakifyButton {
+  width: 100%;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  background-color: #09513c;
+  color: white;
+  border: none;
+  border-radius: 0.3em;
+  cursor: pointer;
+}
+
+@media (max-width: 480px) {
+  .inputFieldsContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+  .inputField {
+    align-items: center;
+  }
+}
